@@ -7,20 +7,21 @@ import { Link, NavLink } from "react-router-dom";
 function Navbar() {
 
   return (
-    <div className="navbar">
-      {(
-        <div className="navbar">
-            
-          <NavLink className="nav-item" to="/">Home</NavLink>
-          <NavLink className="nav-item" to="/profile">Profile</NavLink>
-          <NavLink className="nav-item" to="/login">Login</NavLink>
-          <NavLink className="nav-item" to="/signup">Sign up</NavLink>
-         
-        </div>
-      )}
-
+    <header className = "header">
       
-    </div>
+      <div className="navbar _container">
+        
+        <NavLink className="nav-item" to="/">Home</NavLink>
+        <NavLink className="nav-item" to="/profile">Profile</NavLink>
+        <NavLink className="nav-item" to="/login">Login</NavLink>
+        <NavLink className="nav-item" to="/signup">Sign up</NavLink>
+               
+      </div>
+      
+
+    </header>
+    
+      
   );
 }
 

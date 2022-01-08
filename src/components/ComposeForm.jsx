@@ -2,7 +2,7 @@ import {useState, useEffect, useContext} from 'react'
 import { nanoid } from 'nanoid';
 import AppContext from "../context/AppContext";
 
-const ComposeForm = (props) => {
+const ComposeForm = () => {
   const appContext = useContext(AppContext);
   const [composeInput, setComposeInput] = useState("");
   
@@ -86,7 +86,7 @@ useEffect(() => {
               placeholder="What you have in mind..." value={composeInput}/>
           </div>
           <div className="compose-footer">
-            <div className={"error-" + (enableButton)}>The tweet can't contain more then 140 chars.</div>
+            <div className={"error-" + (enableButton)}>The message can't contain more than 140 characters.</div>
             <button className={"compose-from-submit-" + (enableButton)} onClick={handleClick} disabled={!enableButton} >Send</button>
           </div>
           

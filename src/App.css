@@ -1,18 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Reseting defauld browser values */
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+.App {
+  min-width: 100%;
+  overflow: hidden;
+}
+._container {
+max-width: 1046px;
+margin: 0px auto;
+}
+/* End of reseting */
 
 body {
+  height: 100%;
+  line-height: 1;
   background-color: #15202B;
   font-family: 'Roboto', sans-serif;
   color: #CCCCCC;
   display: flex;
   justify-content: center;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
 
 .compose-form {
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
-  /* justify-content: center; */
+  margin: 50px auto;
   width: 600px;
   height: 180px;
   border: 2px solid #CCCCCC;
@@ -35,6 +71,9 @@ body {
   resize: none;
   outline: none;
   font-family: 'Roboto', sans-serif;
+}
+.compose-from-container {
+  width: 100%;
 }
 .compose-from-area::placeholder {
   color: #CCCCCC;
@@ -78,7 +117,7 @@ body {
 .error-true {
   color: #721C24;
   padding: 4px;
-  font-size: 16px;
+  font-size: 13px;
   width: 340px;
   height: 20px;
   border-radius: 4px;
@@ -91,7 +130,7 @@ body {
 .error-false {
   color: #721C24;
   padding: 4px;
-  font-size: 16px;
+  font-size: 14px;
   width: 340px;
   height: 20px;
   border-radius: 4px;
@@ -131,6 +170,7 @@ body {
 }
 .navbar {
   display: flex;
+  align-items: center;
   width: 1000px;
   height: 60px;
   background-color: #343A40;
